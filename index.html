@@ -7,6 +7,93 @@
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
-    
+    <header class="main-header">
+        <h1>Welcome to Katik!</h1>
+        <p>Hai, Kawan! Selamat datang di Katik ^^</p>
+        <p>Katik merupakan sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.</p>
+    </header>
+        
+    <main>
+        <section class="content-selection">
+            <button href="#" type="button" class="button-segitiga">Segitiga</button>
+            <button href="#" type="button" class="button-jajar-genjang">Jajar Genjang</button>
+        </section>
+
+    <section class="main-content">
+        <aside>
+            <header>
+                <h1 class="luas-segitiga">Luas Segitiga Sama Sisi</h1>
+            </header>
+
+            <article class="luas-segitiga-content"> 
+                <div class="luas-segitiga-img"></div>
+                <p>Berikut ini rumus luas segitiga sama sisi:</p>
+            </article>
+
+            <hr />
+
+            <form>
+                <header>
+                    <h1 class="hitung-luas-segitiga">Hitung Luas Segitiga Sama Sisi</h1>
+                </header>
+                
+                <div>
+                    <label for="panjang-alas">Nilai alas:</label>
+                    <input id="panjang-alas" />
+                </div>
+
+                <div>
+                    <label for="tinggi">Nilai tinggi:</label>
+                    <input id="tinggi" />
+                </div>
+
+                <p id="result">Hasil perhitungan:</p>
+
+                <button>Hitung</button>
+            </form>
+        </aside>
+        
+        <aside>
+            <header>
+                <h1 class="luas-segitiga">Keliling Segitiga Sama Sisi</h1>
+            </header>
+
+            <article class="luas-segitiga-content"> 
+                <div class="luas-segitiga-img"></div>
+                <p>Berikut ini rumus keliling segitiga sama sisi:</p>
+            </article>
+
+            <hr />
+
+            <form>
+                <header>
+                    <h1 class="hitung-luas-segitiga">Hitung Keliling Segitiga Sama Sisi</h1>
+                </header>
+                
+                <div>
+                    <label for="panjang-alas">Nilai S1:</label>
+                    <input id="panjang-alas" />
+                </div>
+
+                <div>
+                    <label for="panjang-alas">Nilai S2:</label>
+                    <input id="panjang-alas" />
+                </div>
+
+                <div>
+                    <label for="panjang-alas">Nilai S3:</label>
+                    <input id="panjang-alas" />
+                </div>
+
+                <p id="result">Hasil perhitungan:</p>
+
+                <button>Hitung</button>
+            </form>
+        </aside>
+    </section>
+
+    </main>
+
+    <footer></footer>
 </body>
 </html>
