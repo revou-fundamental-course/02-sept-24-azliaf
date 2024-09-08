@@ -6,12 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
-<body>
+<body style="background-color: beige;">
     <header class="main-header">
         <h1>Welcome to Katik!</h1>
-        <p>Hai, Kawan! Selamat datang di Katik ^^</p>
-        <p>Katik merupakan sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.</p>
-    </header>
+        <p style="margin-bottom: 3px;">Hai, Selamat datang di Katik! ^^</p>
+        <p style="
+        margin-top: 3px;
+        margin-bottom: 35px;"
+        >Katik merupakan sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.>
         
     <main>
         <section class="content-selection">
@@ -26,12 +28,14 @@
             </header>
 
             <article class="luas-segitiga-content" style="text-align: center;"> 
-                <div class="luas-segitiga-img"></div>
-                <p style="text-align: center;">Rumus Luas Segitiga:</p>
-                <p>½ × alas × tinggi</p>
+                <div>
+                    <img src="./asset/SEGITIGA.png" width="300" height="300" margin="30px" style="margin: 30px;">
+                </div>
+                <p style="text-align: center; margin: 3px;"> <b>Rumus Luas Segitiga:</b></p>
+                <p class="rumus-lst">½ × alas × tinggi</p>
             </article>
 
-            <hr />
+            <hr style="margin-bottom: 30px; margin-top: 40px;"/>
 
             <form>
                 <header>
@@ -40,9 +44,9 @@
                 
                 <div>
                     <label for="alas">Nilai alas:</label><br>
-                    <input type="text" id="alas" name="alas"><br>
+                    <input type="text" id="alas" name="alas" style="margin-bottom: 15px;"><br>
                     <label for="tinggi">Nilai tinggi:</label><br>
-                    <input type="text" id="tinggi" name="tinggi"><br>
+                    <input type="text" id="tinggi" name="tinggi" style="margin-bottom: 15px;"><br>
                 </div>
 
                 <p id="result">Hasil perhitungan:</p>
@@ -57,12 +61,14 @@
             </header>
 
             <article class="luas-segitiga-content" style="text-align: center;"> 
-                <div class="luas-segitiga-img"></div>
-                <p>Rumus Keliling Segitiga:</p>
-                <p>sisi 1 (s1) + sisi 2 (s2) + sisi 3 (s3)</p>
+                <div>
+                    <img src="./asset/SEGITIGA.png" width="300" height="300" margin="30px" style="margin: 30px;">
+                </div>
+                <p style="margin: 3px;"> <b>Rumus Keliling Segitiga:</b> </p>
+                <p class="rumus-kst" text-align="center">s1 + s2 + s3</p>
             </article>
 
-            <hr />
+            <hr style="margin-bottom: 30px; margin-top: 40px;"/>
 
             <form>
                 <header>
@@ -71,11 +77,11 @@
 
                 <div>
                     <label for="sisi">Nilai s1:</label><br>
-                    <input type="text" id="sisi" name="sisi"><br>
+                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
                     <label for="sisi">Nilai s2:</label><br>
-                    <input type="text" id="sisi" name="sisi"><br>
+                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
                     <label for="sisi">Nilai s3:</label><br>
-                    <input type="text" id="sisi" name="sisi"><br>
+                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
                 </div>
                 
 
