@@ -1,86 +1,114 @@
+* {
+    font-family: 'poppins', sans-serif;
+    color: rgb(30, 19, 2);
+}
+
+/* header */
 .main-header {
     text-align: center;
 }
 
+
+/* body */
 .body {
     background-color: beige;
 }
 
-.content-selection {
-    display: flex;
-    flex-direction: column;
-}
 
-.button-segitiga {
-    height: 32px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(172, 159, 137);
-}
-
-.button-jajar-genjang {
-    height: 32px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(172, 159, 137);
-}
-
-.luas-segitiga {
+/* content selection */
+ul {
+    list-style: none;
+    background: rgb(117, 103, 79);
     text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin: 0px;
-    background-color: rgb(232, 189, 110);
+}
+ul li {display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color:rgb(252, 252, 252);
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    background: rgb(117, 103, 79);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover {
+    background: rgb(168, 148, 115);
+}
+ul li:hover ul.dropdown {
+display: block;
 }
 
-.luas-segitiga-content {
+
+/* content image */
+.content-image {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    line-height: 3;
 }
-
-.luas-segitiga-img {
+.content-image img {
     height: 300px;
     width: 300px;
     border: 1px solid;
-    background-image: src("EGITIGA.png");
     background-size: cover;
     background-position: center;
     align-self: center;
     margin: 30px;
 }
 
-.rumus-lst {
-    background-color: rgb(240, 211, 157);
-    height: 32px;
-    border: 2px solid black;
-    border-radius: 20px;
-    margin: 5px;
-    align-content: center;
-}
 
-.rumus-kst {
-    background-color: rgb(240, 211, 157);
-    height: 32px;
-    border: 2px solid black;
-    border-radius: 20px;
-    margin: 5px;
-    align-content: center;
-}
-
-.hitung-luas-segitiga {
-    text-align: center;
-}
-
-.main-content {
+/* content formula */
+.content-formula {
     display: flex;
 }
-
-.main-content>aside {
+.content-formula>aside {
     flex: 1;
 }
 
+
+/* content calculation */
+.content-calculation {
+    display: flex;
+}
+.content-calculation>aside {
+    flex: 1;
+}
+
+
+/* calculation button */
+.hitung-button {
+    margin-bottom: 20px;
+    background-color: rgb(226, 188, 123);
+}
+.reset-button {
+    margin-bottom: 20px;
+    background-color: rgb(228, 210, 181);
+}
+.hasil {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(228, 227, 224);
+}
+
+
+/* page responsive */
 @media only screen and (max-width: 480px) {
-    .main-content {
+    .content-formula {
+        flex-direction: column;
+    }
+@media only screen and (max-width: 480px) {
+    .content-calculation {
         flex-direction: column;
     }
 }

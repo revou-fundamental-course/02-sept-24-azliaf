@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,96 +11,90 @@
 <body class="body">
     <header class="main-header">
         <h1>Welcome to Katik!</h1>
-        <p style="margin-bottom: 3px;">Hai, Selamat datang di Katik! ^^</p>
-        <p style="
-        margin-top: 3px;
-        margin-bottom: 35px;"
-        >Katik merupakan sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.>
-        
+        <p>Hai, Selamat datang di Katik! ^^</p>
+        <p>Katik (Kalkulator Matematik) merupakan sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.</p>
+    </header>
+
     <main>
+        <!-- content selection -->
         <section class="content-selection">
-            <button href="#" type="button" class="button-segitiga">Segitiga</button>
-            <button href="#" type="button" class="button-jajar-genjang">Jajar Genjang</button>
+            <ul>
+                <li>
+                    <a href="#">Pilih Bangun Datar &#x25BE;</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Segitiga</a></li>
+                        <li><a href="#">Jajar Genjang</a></li>
+                    </ul>
+                </li>
+            </ul>
         </section>
 
-    <section class="main-content">
-        <!-- left content -->
-        <aside>
-            <header>
-                <h1 class="luas-segitiga">Luas Segitiga</h1>
-            </header>
+        <!-- content image -->
+        <section class="content-image">
+            <img src="./asset/SEGITIGA.png">
+        </section>
 
-            <article class="luas-segitiga-content" style="text-align: center;"> 
-                <div>
-                    <img src="./asset/SEGITIGA.png" width="300" height="300" margin="30px" style="margin: 30px;">
-                </div>
-                <p style="text-align: center; margin: 3px;"> <b>Rumus Luas Segitiga:</b></p>
-                <p class="rumus-lst">½ × alas × tinggi</p>
-            </article>
+        <!-- content formula -->
+        <section class="content-formula">
+            <!-- left -->
+            <aside>
+                <p><b>Rumus Luas Segitiga:</b><br> ½ × alas × tinggi <br></p>
+            </aside>
 
-            <hr style="margin-bottom: 30px; margin-top: 40px;"/>
+            <!-- right -->
+            <aside>
+                <p><b>Rumus Keliling Segitiga:</b><br> s1 + s2 + s3 <br></p>
+            </aside>
+        </section>
 
-            <form>
+        <!-- content calculation -->
+        <section class="content-calculation">
+            <!-- left -->
+            <aside>
                 <header>
                     <h1 class="hitung-luas-segitiga">Hitung Luas Segitiga</h1>
                 </header>
-                
-                <div>
+
+                <form name="concalc">
                     <label for="alas">Nilai alas:</label><br>
-                    <input type="text" id="alas" name="alas" style="margin-bottom: 15px;"><br>
+                    <input type="number" id="alas" name="alas" ><br>
                     <label for="tinggi">Nilai tinggi:</label><br>
-                    <input type="text" id="tinggi" name="tinggi" style="margin-bottom: 15px;"><br>
-                </div>
+                    <input type="number" id="tinggi" name="tinggi"><br>
 
-                <p id="result">Hasil perhitungan:</p>
+                    <input class="hasil" type="number" placeholder="Hasil Perhitungan" readonly id="hasil"><br>
 
-                <button style="margin-block-end: 50px;">Hitung</button>
-            </form>
-        </aside>
-        <!-- left content end -->
+                    <p id="error" hidden></p>
+           
+                    <button class="hitung-button" id="hitung" onclick="hitung()">Hitung</button><br>
+                    <button class="reset-button" id="reset">Reset</button>
+                </form>
+            </aside>
 
-        <!-- right content -->
-        <aside>
-            <header>
-                <h1 class="luas-segitiga">Keliling Segitiga</h1>
-            </header>
-
-            <article class="luas-segitiga-content" style="text-align: center;"> 
-                <div>
-                    <img src="./asset/SEGITIGA.png" width="300" height="300" margin="30px" style="margin: 30px;">
-                </div>
-                <p style="margin: 3px;"> <b>Rumus Keliling Segitiga:</b> </p>
-                <p class="rumus-kst" text-align="center">s1 + s2 + s3</p>
-            </article>
-
-            <hr style="margin-bottom: 30px; margin-top: 40px;"/>
-
-            <form>
+            <!-- right -->
+            <aside>
                 <header>
-                    <h1 class="hitung-luas-segitiga">Hitung Keliling Segitiga</h1>
+                    <h1 class="hitung-keliling-segitiga">Hitung Keliling Segitiga</h1>
                 </header>
-
-                <div>
-                    <label for="sisi">Nilai s1:</label><br>
-                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
-                    <label for="sisi">Nilai s2:</label><br>
-                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
-                    <label for="sisi">Nilai s3:</label><br>
-                    <input type="text" id="sisi" name="sisi" style="margin-bottom: 15px;"><br>
-                </div>
                 
+                <form name="concalc">
+                    <label for="s1">Nilai s1:</label><br>
+                    <input type="text" id="s1" name="s1" ><br>
+                    <label for="s2">Nilai s2:</label><br>
+                    <input type="text" id="s2" name="s2"><br>
+                    <label for="s3">Nilai s3:</label><br>
+                    <input type="text" id="s3" name="s3"><br>
 
-                <p id="result">Hasil perhitungan:</p>
-
-                <button style="margin-block-end: 50px;">Hitung</button>
-            </form>
-        </aside>
-        <!-- right content end -->
-    </section>
-
+                    <input class="hasil" type="number" placeholder="Hasil Perhitungan" readonly><br>
+            
+                    <p id="error" hidden></p>
+           
+                    <button class="hitung-button" onclick="sumValues()">Hitung</button><br>
+                    <button class="reset-button">Reset</button>
+                </form>
+            </aside>
+        </section>
     </main>
-
-    <footer></footer>
-    <
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
